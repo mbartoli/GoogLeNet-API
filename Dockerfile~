@@ -14,8 +14,6 @@ RUN pip install flask flask-restful
 
 RUN mkdir /models && cd /models && wget http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel
 
-RUN sh /opt/caffe/data/ilsvrc12/get_ilsvrc_aux.sh
-
 WORKDIR /home
 RUN git clone https://github.com/mbartoli/GoogLeNet-API
 WORKDIR /home/GoogLeNet-API/api
