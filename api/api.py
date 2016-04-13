@@ -81,6 +81,7 @@ def predict(data, n_preds=6, display_output=True):
     top_k = probs.argsort()[::-1]
     for pred in top_k[:n_preds]:
         percent = round(probs[pred] * 100, 2)
+        # display it compactly if we're displaying more than the top prediction
         pred_formatted = "%03d" % pred
         if n_preds == 1:
             format_string = "label: {cls} ({label})\ncertainty: {certainty}%"
@@ -89,7 +90,7 @@ def predict(data, n_preds=6, display_output=True):
         if display_output:
             print format_string.format(
                 cls=pred_formatted, label=get_label_name(pred), certainty=percent)
-    return prob
+    return [percent, get_label_name(pred), prediction]
     
 
 class detection(Resource):
