@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 pd.set_option('display.mpl_style', 'default')
-%matplotlib inline
 
 import sys
 sys.path.insert(0, caffe_root + 'python')
