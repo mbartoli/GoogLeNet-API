@@ -9,7 +9,7 @@ docker run -p 3000:3001 mbartoli/googlenet-api
 
 ###Example usage 
 ```
-http:/localhost:3000/detection -d "data=http://xemanhdep.com/gallery/cute_cat1/cute_cat102.jpg" -X PUT
+curl http:/localhost:3000/detection -d "data=http://xemanhdep.com/gallery/cute_cat1/cute_cat102.jpg" -X PUT
 ```
 ```
 [
